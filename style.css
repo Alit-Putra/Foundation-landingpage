@@ -1,173 +1,170 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
-* {
-    margin: 0;
-    padding: 0;
-}
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: Roboto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    flex: 0;
 }
-/* Header */
-.header {
+
+.header-group,
+.info-group,
+.quotes-group,
+.action-group,
+.footer-group {
+    padding: 0 15%;
+}
+
+.header-group,
+.footer-group {
     background-color: #1f2937;
-    padding: 25px 250px;
+    color: #e5e7eb;
 }
-    /* Logo & Navigation */
-.head-link {
+
+button,
+.action-group {
+    background-color: #3882f6;
+}
+
+button {
+    border-radius: 8px;
+    width: 75px;
+    height: 25px;
+    border-style: none;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: #f9faf8;
+}
+
+/* Header */
+.header-nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 100px;
+    margin-bottom: 15px;
 }
-    .logo {
-        font-size: 24px;
-        color: #f9faf8;
-    }
-    .nav-link ul {
-        list-style-type: none;
-        display: flex;
-        flex-direction: row;
-        gap: 15px;
-    }
-    .nav-link a {
-        text-decoration: none;
-        font-size: 18px;
-        color: #e5e7eb;
-    }
 
-    /* Hero content and Image */
-.head-content {
+ul {
+    list-style-type: none;
     display: flex;
-    padding-bottom: 100px;
-}  
-    .hero-main {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-    }
-        .hero-title {
-            font-size: 48px;
-            font-weight: 900;
-            color: #f9faf8;
-            display: flex;
-            width: 50%;
-        }
-        .hero-text {
-            font-size: 18px;
-            color: #e5e7eb;
-            display: flex;
-            width: 70%;
-        }
-        button {
-            color: white;
-            background: #3882f6;
-            display: flex;
-            width: 100px;
-            border : none;
-            border-radius: 5px;
-            padding: 5px 20px;
-            font-size: 15px;
-            font-weight: 600;
-        }
-    /* remember to change to img */
-    .hero-image {
-        display: flex;
-        width: 80%;
-        border: 5px solid white;
-        background: darkgrey;
-        align-items: center;
-        justify-content: center;
-    }
+    gap: 30px;
+}
 
-/* Content List */
-.content {
-    padding: 70px 250px;
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0;
 }
-    .content-title {
-        display: flex;
-        font-size: 36px;
-        font-weight: 900;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 30px;
-    }
-    .list-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-        .list-container ul {
-            list-style-type: none;
-            display: flex;
-            flex-direction: row;
-            width: 700px;
-            gap: 75px;
-        }
-            /* remember to change to img */
-            .image-box {
-                width: 100px;
-                height: 100px;
-                border: 3px solid lightskyblue;
-                border-radius: 10px;
-                margin-bottom: 10px;
-            }
-            .image-text {
-                text-align: center;
-            }
-/* Quotes */
-.quotes {
-    padding: 100px 500px;
-    background: #e5e7eb;
+
+.image-placeholder {
+    width: 400px;
+    height: 200px;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-    p.italic-quotes {
-        font-size: 36px;
-        font-style: italic;
-        font-weight: 100;
-        color: #1f2937;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    p.source-quotes {
-        display: flex;
-        font-size: 24px;
-        font-weight: 900;
-        color: #1f2937;
-        align-items: center;
-        justify-content: flex-end;
-        right: 0;
-    }
-/* Modal */
-.modal-container {
-    padding: 100px 500px;
+
+.left-header h1 {
+    font-size: 48px;
+    font-weight: bolder;
+    color: #f9faf8;
 }
-    .modal-box {
-        display: flex;
-        background-color: #3882f6;
-        color: white;
-        padding: 50px 0;
-        border-radius: 15px;
-        gap: 15px;
-        align-items: center;
-    }
-        .modal-info {
-            padding: 5px 125px;
-        }
-            .modal-title {
-                display: flex;
-                margin-bottom: 5px;
-                font-size: 24px;
-                font-weight: 900;
-            }
-            .modal-button {
-                border: 1px solid white;
-            }
-/* Footer */
-.footer {
-    padding: 20px 500px;
-    background-color: #1f2937;
+
+.nav-link,
+.left-header p {
+    font-size: 18px;
+    color: #e5e7eb;
+}
+
+/* The Info Section */
+.info-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.info-content {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    width: 400px;
+    margin-bottom: 50px;
+    align-items: center;
+}
+
+.image-box {
+    width: 150px;
+    height: 150px;
+    border: solid #3882f6 2px;
+}
+
+.image-text {
     text-align: center;
 }
-    .footer-text {
-        font-size: 18px;
-        color: white;
-    }
+
+.info-group h2 {
+    font-size: 36px;
+    font-weight: bolder;
+    color: #1f2937;
+}
+
+/* Quotes Section */
+.quotes-group {
+    background-color: #e5e7eb;
+    font-size: 36px;
+    font-style: italic;
+    font-weight: lighter;
+    color: #1f2937;
+    margin: 50px 0;
+}
+
+.quote {
+    text-align: justify;
+}
+.author {
+    text-align: right;
+    font-weight: 900;
+}
+
+/* Call to Action */
+.action-group {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.action-content {
+    margin: 18px 32px;
+    padding: 16px 50px;
+    background-color: #3882f6;
+    display: flex;
+    border-radius: 10px;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    width: 70vw;
+}
+
+.under-button {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    border: solid white 1px;
+}
+
+/* Footer */
+.footer-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
